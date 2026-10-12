@@ -1,6 +1,12 @@
 # Pocket Cam
 
+[**Open Pocket Cam →**](https://igor-div.github.io/POCKET-CAM/)
+
 Game Boy-style camera: 160 × 144 canvas, four shades, contrast, pixel size, pause, and PNG saving. No dependencies.
+
+## GitHub Pages
+
+To make the app link work, enable GitHub Pages in this repository: **Settings → Pages → Build and deployment → Deploy from a branch**, then select **main** and **/ (root)** and click **Save**. After deployment finishes, the link above opens the app directly. The HTTPS page supports camera access with your browser permission.
 
 ## Запуск
 
