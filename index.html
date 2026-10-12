@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161a17">
+  <title>POCKET CAM — your camera in 8-bit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="./" aria-label="Pocket Cam, home"><span class="logo-icon">▦</span> POCKET<span>CAM</span><small>CAMERA EXPERIMENT / 001</small></a>
+    <span class="header-note"><i></i> REAL WORLD. RETRO PIXELS.</span>
+  </header>
+  <main>
+    <section class="intro"><div class="eyebrow">SEE THE WORLD IN 8-BIT</div><h1>Your camera.<br><span>Another era.</span></h1><p>The world you know, in four shades of green.<br>Turn on your camera and travel back to 1989.</p></section>
+    <aside class="camera-card">
+      <div class="card-heading"><span><i id="camera-dot"></i> SOURCE</span><span id="camera-label">CAMERA OFF</span></div>
+      <div class="camera-preview"><video id="video" autoplay muted playsinline aria-label="Original camera feed"></video><div id="camera-placeholder"><span class="camera-icon">◉</span><span>Your camera preview appears here</span></div><span class="preview-corner top"></span><span class="preview-corner bottom"></span><span class="preview-tag">LIVE INPUT</span></div>
+      <button id="camera-button" class="primary-button">Enable camera <span>↗</span></button>
+      <p id="camera-message" role="status">Video is processed only on your device.</p>
+    </aside>
+    <section class="device-area" aria-label="Game Boy display">
+      <div class="device">
+        <div class="top-line"><span></span><span></span><span></span></div>
+        <div class="screen-shell">
+          <div class="screen-heading"><span></span><small>DOT MATRIX WITH STEREO SOUND</small><span></span></div>
+          <div class="screen-row"><div class="battery"><i id="power-light"></i><span>BATTERY</span></div><div class="lcd"><canvas id="screen" width="160" height="144" aria-label="Video in the four-color Game Boy palette"></canvas><div class="screen-glass"></div></div></div>
+          <div class="screen-bottom"><span>160 × 144</span><span id="screen-state">DEMO MODE</span></div>
+        </div>
+        <div class="device-brand">POCKET <strong>CAM</strong><span>™</span></div>
+        <div class="device-controls"><div class="dpad" aria-hidden="true"><div class="dpad-v"></div><div class="dpad-h"></div><div class="dpad-center"></div><span class="up">▲</span><span class="right">▶</span><span class="down">▼</span><span class="left">◀</span></div><div class="action-buttons"><div><button id="snapshot-button" aria-label="Save snapshot" title="Save snapshot">B</button><span>SNAPSHOT</span></div><div><button id="freeze-button" aria-label="Freeze frame" title="Freeze frame" aria-pressed="false">A</button><span>PAUSE</span></div></div></div>
+        <div class="device-bottom"><div class="utility-buttons"><div><button id="reset-button" aria-label="Reset settings"></button><span>SELECT</span></div><div><button id="power-button" aria-label="Turn display off" aria-pressed="true"></button><span>START</span></div></div><div class="speaker" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      </div>
+      <div class="device-caption"><span class="caption-line"></span> SMALL SCREEN. BIG NOSTALGIA. <span class="caption-line"></span></div>
+    </section>
+    <section class="settings" aria-label="Image settings"><div class="settings-title"><span>MAKE IT YOUR SCREEN</span><small>01 — 03</small></div><div class="setting"><div class="setting-label"><label for="contrast">Contrast</label><output id="contrast-value">1.2×</output></div><input id="contrast" type="range" min="0.5" max="2.5" step="0.1" value="1.2"></div><div class="setting"><div class="setting-label"><label for="resolution">Pixel size</label><output id="resolution-value">1×</output></div><input id="resolution" type="range" min="1" max="4" step="1" value="1"></div><div class="setting palette-setting"><div class="setting-label"><span>Palette</span><span id="palette-label">CLASSIC</span></div><div class="palettes"><button class="palette active" data-palette="classic" aria-label="Classic green palette" aria-pressed="true"><i></i><i></i><i></i><i></i></button><button class="palette" data-palette="pocket" aria-label="Pocket gray palette" aria-pressed="false"><i></i><i></i><i></i><i></i></button><button class="palette" data-palette="amber" aria-label="Amber palette" aria-pressed="false"><i></i><i></i><i></i><i></i></button></div></div></section>
+  </main>
+  <footer><span>MADE FOR MOMENTS, NOT MEGAPIXELS.</span><span>4 SHADES <b>·</b> 23,040 PIXELS <b>·</b> A DIFFERENT VIEW OF REALITY</span></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
